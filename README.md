@@ -116,7 +116,7 @@ For example, pnpm install package's bin as `node_modules/.bin/vite` which is she
 So, We can't run the `vite` command via `node` command.
 
 ```bash
-node --import ./env.local.js node_modules/.bin/vite
+node --import=./env.local.js node_modules/.bin/vite
 # Throws error
 ```
 
