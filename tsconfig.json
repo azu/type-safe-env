@@ -22,6 +22,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "allowImportingTsExtensions": true,
     // Type Check for env.*.js
     "allowJs": true,
     "checkJs": true

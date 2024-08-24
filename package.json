@@ -17,24 +17,14 @@
   },
   "license": "MIT",
   "author": "azu",
-  "main": "lib/type-safe-env.js",
-  "types": "lib/type-safe-env.d.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
-  "files": [
-    "bin/",
-    "lib/",
-    "src/"
-  ],
   "scripts": {
-    "build": "tsc -p .",
+    "dev": "NODE_OPTIONS='--import=./env.local.js' node --experimental-strip-types ./src/app/index.ts",
+    "test": "NODE_OPTIONS='--import=./env.test.js' node --experimental-strip-types ./src/app/index.ts",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
     "prepare": "git config --local core.hooksPath .githooks",
     "prepublishOnly": "npm run build",
     "type-check": "tsc --noEmit",
-    "test": "npm run type-check",
+    "ci:test": "npm run type-check",
     "watch": "tsc -p . --watch"
   },
   "lint-staged": {

@@ -1,4 +1,4 @@
-import { setEnv } from "./src/env/setEnv";
+import { setEnv } from "./src/env/setEnv.js";
 
 // set envs
 setEnv({

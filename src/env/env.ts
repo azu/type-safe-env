@@ -1,5 +1,6 @@
-import { defineEnv } from "./defineEnv";
+import { defineEnv } from "./defineEnv.ts";
 
+// Define environment variables
 export const env = defineEnv({
     /**
      * Localhost URL
