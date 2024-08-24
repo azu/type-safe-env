@@ -18,10 +18,12 @@ jobs:
           cache: pnpm
       - name: Install
         run: pnpm install
-      - name: Test
-        run: pnpm run test
+      - name: CI Test
+        run: pnpm run ci:test
       - name: Run dev
         run: pnpm run dev
+      - name: Run Test
+        run: pnpm run test
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
