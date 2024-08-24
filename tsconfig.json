@@ -28,8 +28,9 @@
     "checkJs": true
   },
   "include": [
-    "**/*",
+    "**/*.ts",
     // allow to check js files
+    "./src/env/setEnv.js",
     "env.*.js"
   ],
   "exclude": [
