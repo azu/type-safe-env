@@ -6,7 +6,7 @@ export type BaseEnvRecord = Record<
         defaultValue?: string;
     }
 >;
-export type ReturnTypeOfCreateEnv<T extends BaseEnvRecord> = {
+export type ReturnTypeOfDefineEnv<T extends BaseEnvRecord> = {
     // If the value is required, it should be a string, otherwise it should be a string or undefined
     [K in keyof T]: T[K]["required"] extends true ? string : string | undefined;
 };
@@ -15,7 +15,7 @@ export type ReturnTypeOfCreateEnv<T extends BaseEnvRecord> = {
  * Define environment variables and create them
  * @param envs
  */
-export const defineEnv = <T extends BaseEnvRecord>(envs: T): ReturnTypeOfCreateEnv<T> => {
+export const defineEnv = <T extends BaseEnvRecord>(envs: T): ReturnTypeOfDefineEnv<T> => {
     const result = new Map<string, string | undefined>();
     Object.entries(envs).forEach(([key, { value, required, defaultValue }]) => {
         if (required && !value && !defaultValue) {
@@ -25,5 +25,5 @@ export const defineEnv = <T extends BaseEnvRecord>(envs: T): ReturnTypeOfCreateE
         }
         result.set(key, value || defaultValue);
     });
-    return Object.fromEntries(result) as ReturnTypeOfCreateEnv<T>;
+    return Object.fromEntries(result) as ReturnTypeOfDefineEnv<T>;
 };
