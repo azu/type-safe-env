@@ -24,7 +24,8 @@
     "prepare": "git config --local core.hooksPath .githooks",
     "prepublishOnly": "npm run build",
     "type-check": "tsc --noEmit",
-    "ci:test": "npm run type-check",
+    "unit-test": "node --experimental-strip-types --test src/env/createEnv.test.ts",
+    "ci:test": "npm run type-check && npm run unit-test",
     "watch": "tsc -p . --watch"
   },
   "lint-staged": {
