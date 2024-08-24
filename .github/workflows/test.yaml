@@ -20,7 +20,8 @@ jobs:
         run: pnpm install
       - name: Test
         run: pnpm run test
-
+      - name: Run dev
+        run: pnpm run dev
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
