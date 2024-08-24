@@ -1,0 +1,57 @@
+{
+  "name": "type-safe-env",
+  "version": "1.0.0",
+  "description": "Type Safe env snippet for Node.js",
+  "keywords": [
+    "node.js",
+    "typescript",
+    "env"
+  ],
+  "homepage": "https://github.com/azu/type-safe-env/tree/master/",
+  "bugs": {
+    "url": "https://github.com/azu/type-safe-env/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azu/type-safe-env.git"
+  },
+  "license": "MIT",
+  "author": "azu",
+  "main": "lib/type-safe-env.js",
+  "types": "lib/type-safe-env.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css}\"",
+    "prepare": "git config --local core.hooksPath .githooks",
+    "prepublishOnly": "npm run build",
+    "type-check": "tsc --noEmit",
+    "test": "npm run type-check",
+    "watch": "tsc -p . --watch"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": {
+    "printWidth": 120,
+    "singleQuote": false,
+    "tabWidth": 4,
+    "trailingComma": "none"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
+}
