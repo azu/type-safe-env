@@ -2,7 +2,7 @@
   "compilerOptions": {
     /* Basic Options */
     "noEmit": true,
-    "module": "NodeNext",
+    "module": "ESNext",
     "moduleResolution": "Bundler",
     "esModuleInterop": true,
     "newLine": "LF",
