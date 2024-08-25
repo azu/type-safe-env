@@ -3,7 +3,7 @@
     /* Basic Options */
     "noEmit": true,
     "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Bundler",
     "esModuleInterop": true,
     "newLine": "LF",
     "outDir": "./lib/",
