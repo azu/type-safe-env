@@ -2,12 +2,12 @@
   "compilerOptions": {
     /* Basic Options */
     "noEmit": true,
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "esModuleInterop": true,
     "newLine": "LF",
     "outDir": "./lib/",
-    "target": "ES2018",
+    "target": "ES2022",
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
