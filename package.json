@@ -1,6 +1,7 @@
 {
   "name": "type-safe-env",
   "version": "1.0.0",
+  "type": "module",
   "description": "Type Safe env snippet for Node.js",
   "keywords": [
     "node.js",
